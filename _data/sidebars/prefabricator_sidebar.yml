@@ -1,0 +1,53 @@
+entries:
+- title: Sidebar
+  product: Prefabricator
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Prefab Basics
+      url: /prefab_basics.html
+      output: web, pdf
+
+    - title: Prefab Selection
+      url: /prefab_selection.html
+      output: web, pdf
+
+    - title: Sample 3
+      url: /p1_sample3.html
+      output: web, pdf
+
+  - title: Another heading
+    output: web, pdf
+
+    folderitems:
+    - title: Sample 4
+      url: /p1_sample4.html
+      output: web, pdf
+
+    - title: Sample 5
+      url: /p1_sample5.html
+      output: web, pdf
+
+    - title: Sample 6
+      url: /p1_sample6.html
+      output: web, pdf
+
+    - title: Sample 7
+      url: /p1_sample7.html
+      output: web, pdf
