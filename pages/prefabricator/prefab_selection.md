@@ -6,14 +6,15 @@ permalink: prefab_selection.html
 folder: prefabricator
 ---
 
-## Selection
+## Prefab Selection
 
 Select an existing prefab actor on the scene by clicking on it and move it around as a single unit.  A selected prefab would have a green outline to it
 
-{% include note.html content="The green outlines will not show up if the editor is in *Game Mode*.  Press the **G key** to toggle it" %}
+{% include note.html content="The green outlines will not show up if the editor is in *Game Mode*.  Press the **G key** in the editor viewport to toggle it" %}
 
 {% include inline_image.html file="selection/B_selection.jpg" alt="Selected Prefab" %}
 
+## Prefab Item Selection
 
 Click on the prefab again to select the item inside the prefab
 

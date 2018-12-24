@@ -28,8 +28,8 @@ entries:
       url: /prefab_selection.html
       output: web, pdf
 
-    - title: Sample 3
-      url: /p1_sample3.html
+    - title: Prefab Modifications
+      url: /prefab_modification.html
       output: web, pdf
 
   - title: Another heading
