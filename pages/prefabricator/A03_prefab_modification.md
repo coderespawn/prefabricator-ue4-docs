@@ -35,6 +35,8 @@ the material
 {% include inline_image.html file="modification/s4.jpg" %}
 
 
+---
+
 ## Saving Prefabs
 
 Click on the mesh again to select the prefab actor
@@ -54,6 +56,8 @@ Click *Save Prefab to Asset*
 Once saved, these changes would automatically be propagated to all the 
 instances in the level.  This also works across different maps
 
+---
+
 ## Restoring Prefabs
 
 If you have unsaved changes on a prefab actor and would like to discard those changes 
@@ -62,8 +66,7 @@ and reload them from the asset file, click *Load Prefab from Asset*
 {% include inline_image.html file="modification/load_from_asset.png" %}
 
 
-{% include links.html %}
-
+---
 
 ## Dynamic Updates
 
@@ -75,6 +78,12 @@ This also works when you open another map that contains an older version of the 
 {% include note.html content="For optimization, this dynamic update to newer version is done only on the editor and not in runtime builds.  You should open your map atleast once and save the updated static content before cooking your standalone build" %}
 
 
+---
 
-Explore the next section from the sidebar
+{% include links.html %}
+
+Explore the next section from the side bar
+
+
+
 

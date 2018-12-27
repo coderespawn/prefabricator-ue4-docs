@@ -14,6 +14,8 @@ Select an existing prefab actor on the scene by clicking on it and move it aroun
 
 {% include inline_image.html file="selection/B_selection.jpg" alt="Selected Prefab" %}
 
+---
+
 ## Prefab Item Selection
 
 Click on the prefab again to select the item inside the prefab
@@ -29,6 +31,11 @@ You can also select the items inside the prefab from the World Outliner
 {% include inline_image.html file="selection/B_prefab_selection_world_outliner.png" alt="Selected Prefab" %}
 
 
-Explore the next section from the sidebar
+---
 
 {% include links.html %}
+
+Explore the next section from the side bar
+
+
+

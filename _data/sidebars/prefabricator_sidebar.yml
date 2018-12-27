@@ -20,6 +20,7 @@ entries:
   - title: Getting Started
     output: web, pdf
     folderitems:
+
     - title: Prefab Basics
       url: /index.html
       output: web, pdf
@@ -32,22 +33,55 @@ entries:
       url: /prefab_modification.html
       output: web, pdf
 
-  - title: Another heading
+    - title: Pivot
+      url: /pivot.html
+      output: web, pdf
+
+    - title: Nested Prefabs
+      url: /nested_prefabs.html
+      output: web, pdf
+
+    - title: Nested Prefab Selection
+      url: /nested_prefab_selection.html
+      output: web, pdf
+
+    - title: Build Event Listener
+      url: /build_event_listener.html
+      output: web, pdf
+
+  - title: Randomization
     output: web, pdf
-
     folderitems:
-    - title: Sample 4
-      url: /p1_sample4.html
+
+    - title: Prefab Collections
+      url: /prefab_collection.html
       output: web, pdf
 
-    - title: Sample 5
-      url: /p1_sample5.html
+    - title: Nested Prefab Randomization
+      url: /nested_prefab_randomization.html
       output: web, pdf
 
-    - title: Sample 6
-      url: /p1_sample6.html
+    - title: Seed Linkers
+      url: /seed_linkers.html
       output: web, pdf
 
-    - title: Sample 7
-      url: /p1_sample7.html
+
+  - title: Runtime Support
+    output: web, pdf
+    folderitems:
+
+    - title: Spawning Prefabs
+      url: /spawning_prefabs.html
+      output: web, pdf
+
+    - title: Blueprint Prefab Randomization
+      url: /blueprint_prefab_randomization.html
+      output: web, pdf
+
+    - title: Blueprint Level Randomization
+      url: /blueprint_level_randomization.html
+      output: web, pdf
+
+    - title: Asynchronous Building
+      url: /async_build.html
       output: web, pdf
