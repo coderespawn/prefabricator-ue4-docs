@@ -1,10 +1,10 @@
 destination: _site/
-url: "http://127.0.0.1:4011"
-baseurl: "/product1-pdf"
-port: 4011
+url: "http://127.0.0.1:4010"
+baseurl: "/prefabricator-pdf"
+port: 4010
 output: pdf
-product: product1
-print_title: Product 1 documentation
+product: prefabricator
+print_title: Prefabricator - User Guide
 print_subtitle: version 1.0
 output: pdf
 defaults:
@@ -17,4 +17,4 @@ defaults:
       comments: true
       search: true
 
-pdf_sidebar: product1_sidebar
+pdf_sidebar: prefabricator_sidebar
