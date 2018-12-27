@@ -24,12 +24,11 @@ Clicking on the prefab toggles between the prefab and the items inside it. This 
 the selection would cycle between the different prefab levels)
 
 
-
-
 You can also select the items inside the prefab from the World Outliner
 
 {% include inline_image.html file="selection/B_prefab_selection_world_outliner.png" alt="Selected Prefab" %}
 
 
+Explore the next section from the sidebar
 
 {% include links.html %}

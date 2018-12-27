@@ -21,7 +21,7 @@ entries:
     output: web, pdf
     folderitems:
     - title: Prefab Basics
-      url: /prefab_basics.html
+      url: /index.html
       output: web, pdf
 
     - title: Prefab Selection

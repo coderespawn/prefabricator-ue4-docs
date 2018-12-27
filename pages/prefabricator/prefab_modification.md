@@ -62,5 +62,19 @@ and reload them from the asset file, click *Load Prefab from Asset*
 {% include inline_image.html file="modification/load_from_asset.png" %}
 
 
-
 {% include links.html %}
+
+
+## Dynamic Updates
+
+{% include inline_image.html file="modification/dynamic_update.gif" %}
+
+When you modify and save a prefab asset, all the existing prefabs actors in the scene will be automatically updated. 
+This also works when you open another map that contains an older version of the prefab
+
+{% include note.html content="For optimization, this dynamic update to newer version is done only on the editor and not in runtime builds.  You should open your map atleast once and save the updated static content before cooking your standalone build" %}
+
+
+
+Explore the next section from the sidebar
+

@@ -2,7 +2,7 @@
 title: Prefab Basics
 keywords: prefab
 sidebar: prefabricator_sidebar
-permalink: prefab_basics.html
+permalink: index.html
 folder: prefabricator
 summary: "Create and use your first prefab"
 ---
@@ -43,7 +43,10 @@ Create a few more of these instances
 {% include inline_image.html file="getting_started/A_drop_prefab_more.jpg" alt="Prefab created" %}
 
 
-Congratulation! You've created and used your first prefab.  Explore the next section
+Congratulation! You've created and used your first prefab.  Explore the [Next Section][prefab_selection]
+
+{% include links.html %}
+
 
 
 
