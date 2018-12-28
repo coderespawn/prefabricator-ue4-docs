@@ -45,10 +45,6 @@ entries:
       url: /nested_prefab_selection.html
       output: web, pdf
 
-    - title: Build Event Listener
-      url: /build_event_listener.html
-      output: web, pdf
-
   - title: Randomization
     output: web, pdf
     folderitems:
@@ -85,3 +81,13 @@ entries:
     - title: Asynchronous Building
       url: /async_build.html
       output: web, pdf
+
+  - title: Advanced
+    output: web, pdf
+    folderitems:
+
+    - title: Build Event Listener
+      url: /build_event_listener.html
+      output: web, pdf
+
+    

@@ -21,6 +21,10 @@ The next click will select the mesh that was clicked on. Subsequent clicks will 
 
 ---
 
+{% include inline_image.html file="nested_selection/smart_select.gif" %}
+
+---
+
 {% include links.html %}
 
 Explore the next section from the side bar
