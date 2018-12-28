@@ -57,6 +57,10 @@ entries:
       url: /nested_prefab_randomization.html
       output: web, pdf
 
+    - title: Level Randomization
+      url: /level_randomization.html
+      output: web, pdf
+
     - title: Seed Linkers
       url: /seed_linkers.html
       output: web, pdf
