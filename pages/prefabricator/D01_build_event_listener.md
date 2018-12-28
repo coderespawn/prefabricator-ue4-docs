@@ -104,7 +104,4 @@ Variables:
 
 {% include links.html %}
 
-Explore the next section from the side bar
-
-
-
+You've reached the end of the User Guide. Let us know what you build in the forums.  [http://prefabricator.io](http://prefabricator.io)
