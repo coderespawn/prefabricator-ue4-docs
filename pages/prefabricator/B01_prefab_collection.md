@@ -45,6 +45,9 @@ This is useful if you want to quickly populate the scene, you can use the same p
 and have prefabricator pick random items from it
 
 
+{% include note.html content="Make sure all the prefabs in your collections have consistent pivots so all the items in the collection spawn consistently in the right place" %}
+
+
 ---
 
 Select the spawned prefab actor and click Randomize button on the Details window
@@ -56,6 +59,7 @@ Select the spawned prefab actor and click Randomize button on the Details window
 
 You can also duplicate the spawned prefab actor and the newly duplicated prefab actor 
 will have a different randomized prefab, making it easy to quickly place different prefabs all over the scene
+
 
 ---
 
