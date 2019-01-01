@@ -27,9 +27,9 @@ Double click the asset and add the prefabs to the list
 
 {% include inline_image.html file="prefab_collection/03.png" %}
 
-The Weights parameter affects the probabily of picking that item compared to the other list
+The Weights parameter affects the probabily of picking that item compared to the other items in the list
 
-For e.g. if we have 3 items with weights (1, 1, 2, 1), the 3rd item will be twice as likely to be picked. This is the same as (10, 10, 20, 10)
+For e.g. if we have 4 items with weights (1, 1, 2, 1), the 3rd item will be twice as likely to be picked. This is the same as (10, 10, 20, 10) or (5, 5, 10, 5)
 
 ---
 
