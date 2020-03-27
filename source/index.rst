@@ -46,10 +46,15 @@ Prefabricator Documentation [UE4]
    
    construction_system_overview
    construction_system_project_setup
-   construction_system_game_sample
    construction_system_prefab_setup
    construction_system_player_setup
    construction_system_build_menu
    construction_system_save_load
 
-
+.. toctree::
+   :maxdepth: 2
+   :caption: Samples
+   
+   game_sample_platformer
+   game_sample_construction
+   
