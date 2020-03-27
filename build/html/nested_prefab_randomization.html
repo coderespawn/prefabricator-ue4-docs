@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nested Prefab Randomization &mdash; Prefabricator [UE4]  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom_prefab.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Level Randomization" href="level_randomization.html" />
+    <link rel="prev" title="Prefab Collections" href="prefab_collection.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Prefabricator [UE4]
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prefab_basics.html">Prefab Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_selection.html">Prefab Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_modification.html">Prefab Modifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pivot.html">Pivot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefabs.html">Nested Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefab_selection.html">Nested Prefab Selection</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Randomization</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prefab_collection.html">Prefab Collections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nested Prefab Randomization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sample-nested-prefab-preparation">Sample Nested Prefab Preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ground-floor-prefab-collection">Ground Floor Prefab Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#floor-prefab-collection">Floor Prefab Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roof-prefab-collection">Roof Prefab Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facade-decoration-collection">Facade Decoration Collection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-nested-prefab-assembly">Sample Nested Prefab Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-nested-prefab-randomization">Sample Nested Prefab Randomization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nested-child-prefab-randomization">Nested Child Prefab Randomization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="level_randomization.html">Level Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seed_linkers.html">Seed Linkers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Runtime Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spawning_prefabs.html">Spawning Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_prefab_randomization.html">Blueprint Prefab Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_level_randomization.html">Blueprint Level Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="async_build.html">Asynchronous Building</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_event_listener.html">Build Event Listener</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Prefabricator [UE4]</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Nested Prefab Randomization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nested-prefab-randomization">
+<h1>Nested Prefab Randomization<a class="headerlink" href="#nested-prefab-randomization" title="Permalink to this headline">¶</a></h1>
+<p>When a prefab actor is randomized, it would randomize the seed of every nested child prefab down to the lowest level</p>
+<p>This allows you to have interesting randomization with more complex nested prefabs built from simpler prefab collections</p>
+<p>In this example, we’ll assemble the following building:</p>
+<img alt="_images/before.gif" src="_images/before.gif" />
+<hr class="docutils" />
+<div class="section" id="sample-nested-prefab-preparation">
+<h2>Sample Nested Prefab Preparation<a class="headerlink" href="#sample-nested-prefab-preparation" title="Permalink to this headline">¶</a></h2>
+<p>We will build the building prefab using the following smaller prefabs
+* Ground Floor Prefab - Represents the ground floor / entrance of the building
+* Floor Prefab - Represents a single floor
+* Roof Prefab - Roof of the building
+* Facade Decoration - The decoration added to the facade of the building (fire exit)</p>
+<p>Since we have multiple variations for each of these prefabs, we’ll use prefab collections for the above 4</p>
+<div class="section" id="ground-floor-prefab-collection">
+<h3>Ground Floor Prefab Collection<a class="headerlink" href="#ground-floor-prefab-collection" title="Permalink to this headline">¶</a></h3>
+<p>We have assembled 2 ground floor prefab variations.  Add them into a <em>GroundFloor</em> prefab collection</p>
+<img alt="_images/014.png" src="_images/014.png" />
+</div>
+<div class="section" id="floor-prefab-collection">
+<h3>Floor Prefab Collection<a class="headerlink" href="#floor-prefab-collection" title="Permalink to this headline">¶</a></h3>
+<p>We have assembled 3 floor prefab variations.  Add them into a <em>Floor</em> prefab collection</p>
+<img alt="_images/024.png" src="_images/024.png" />
+</div>
+<div class="section" id="roof-prefab-collection">
+<h3>Roof Prefab Collection<a class="headerlink" href="#roof-prefab-collection" title="Permalink to this headline">¶</a></h3>
+<p>We have assembled 2 roof prefab variations.  Add them into a <em>Roof</em> prefab collection</p>
+<img alt="_images/031.png" src="_images/031.png" />
+</div>
+<div class="section" id="facade-decoration-collection">
+<h3>Facade Decoration Collection<a class="headerlink" href="#facade-decoration-collection" title="Permalink to this headline">¶</a></h3>
+<p>We want to decroate the facade of the buildings and prepared 5 different prefabs for it</p>
+<img alt="_images/04.png" src="_images/04.png" />
+<p>An empty prefab was included in the list so we don’t have any decorations sometimes</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure all the prefabs in your collections have consistent pivots so all the items in the collection spawn consistently in the right place</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sample-nested-prefab-assembly">
+<h2>Sample Nested Prefab Assembly<a class="headerlink" href="#sample-nested-prefab-assembly" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have the pieces in place, assemble our master building prefab</p>
+<ul class="simple">
+<li><p>Drop in the ground floor prefab collection on to the scene</p></li>
+<li><p>Drop as many floor prefab collections as necessary</p></li>
+<li><p>Drop in the roof prefab collection</p></li>
+<li><p>Drop in the facade decoration prefab collection</p></li>
+</ul>
+<img alt="_images/prefab_rand_assembly.gif" src="_images/prefab_rand_assembly.gif" />
+<p>Select the prefabs you just dropped by holding the <em>Control</em> key and clicking on them</p>
+<img alt="_images/select_building_items.jpg" src="_images/select_building_items.jpg" />
+<p>Create a prefab with the current selection</p>
+<div class="figure align-default" id="id1">
+<img alt="_images/A_create_prefab_menu.png" src="_images/A_create_prefab_menu.png" />
+<p class="caption"><span class="caption-text">Create prefab menu</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sample-nested-prefab-randomization">
+<h2>Sample Nested Prefab Randomization<a class="headerlink" href="#sample-nested-prefab-randomization" title="Permalink to this headline">¶</a></h2>
+<p>Select your newly created prefab and click Randomize.  It would randomize everything inside it
+(the floors, ground floor, roofs, facade decorations)</p>
+<img alt="_images/randomize_nested_detail.png" src="_images/randomize_nested_detail.png" />
+<img alt="_images/before.gif" src="_images/before.gif" />
+</div>
+<hr class="docutils" />
+<div class="section" id="nested-child-prefab-randomization">
+<h2>Nested Child Prefab Randomization<a class="headerlink" href="#nested-child-prefab-randomization" title="Permalink to this headline">¶</a></h2>
+<p>You can select child prefabs and randomize them individually for more fine tuned control</p>
+<img alt="_images/prefab_rand_child.gif" src="_images/prefab_rand_child.gif" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="level_randomization.html" class="btn btn-neutral float-right" title="Level Randomization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="prefab_collection.html" class="btn btn-neutral float-left" title="Prefab Collections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Code Respawn
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

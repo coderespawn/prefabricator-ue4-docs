@@ -1,0 +1,59 @@
+.wy-side-nav-search {
+    background-color: #ff6700;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+	color: #ff6700;
+}
+
+.wy-nav-top {
+	background: #ff6700;
+}
+
+.wy-nav-side {
+	background: #FFFCFA;
+}
+
+.wy-menu-vertical a {
+	color: black;
+}
+
+.wy-menu-vertical a:hover {
+	color: white;
+}
+
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a {
+	background: #ff9248;
+}
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a:hover {
+	background: #ff8000;
+}
+
+
+/* sub menu background */
+.wy-menu-vertical li.toctree-l2.current>a
+{
+	background: #ffd7b5;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a
+{
+	background: #ffd7b5;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a:hover
+{
+	background: #ffb38a;
+}
+
+
+.wy-menu-vertical li.toctree-l2>a
+{
+	background: #ffd7b5;
+}
+
+.wy-menu-vertical li.toctree-l2>a:hover
+{
+	background: #ffb38a;
+}
+

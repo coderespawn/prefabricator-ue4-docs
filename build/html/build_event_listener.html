@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build Event Listener &mdash; Prefabricator [UE4]  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom_prefab.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Asynchronous Building" href="async_build.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Prefabricator [UE4]
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prefab_basics.html">Prefab Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_selection.html">Prefab Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_modification.html">Prefab Modifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pivot.html">Pivot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefabs.html">Nested Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefab_selection.html">Nested Prefab Selection</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Randomization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prefab_collection.html">Prefab Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefab_randomization.html">Nested Prefab Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_randomization.html">Level Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seed_linkers.html">Seed Linkers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Runtime Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spawning_prefabs.html">Spawning Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_prefab_randomization.html">Blueprint Prefab Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_level_randomization.html">Blueprint Level Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="async_build.html">Asynchronous Building</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build Event Listener</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sample-blueprint">Sample Blueprint</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#post-spawn">Post Spawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-random-material">Apply Random Material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-random-material">Get Random Material</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Prefabricator [UE4]</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Build Event Listener</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-event-listener">
+<h1>Build Event Listener<a class="headerlink" href="#build-event-listener" title="Permalink to this headline">¶</a></h1>
+<p>These are blueprints that you can attach to a prefab asset.    It allows you to
+hook into the various build stages of the prefab when it is spawned into the world and modify the
+spawned actors through your blueprint logic</p>
+<p>These are great for applying random materials, changing light colors or your custom game logic etc</p>
+<hr class="docutils" />
+<p>In this example, we’ll use the following nested building prefab.</p>
+<img alt="_images/prefab_asset.png" src="_images/prefab_asset.png" />
+<p>The prefab is built using smaller prefabs: ground floor prefab, 3 floor prefabs, a roof prefab and facade decorations prefab</p>
+<img alt="_images/before.gif" src="_images/before.gif" />
+<p>The art asset comes with various materials that when applied, changes the look of the building.   Instead of recreating
+the prefab each with a different material,  we’ll use blueprints to randomly assign one of the materials so it looks like this</p>
+<img alt="_images/after.gif" src="_images/after.gif" />
+<hr class="docutils" />
+<p>Create a <em>Prefabricator Event Listener</em> blueprint</p>
+<img alt="_images/bp_01.png" src="_images/bp_01.png" />
+<img alt="_images/bp_02.png" src="_images/bp_02.png" />
+<img alt="_images/bp_03.png" src="_images/bp_03.png" />
+<hr class="docutils" />
+<p>Override the Post Spawn function and add your logic here</p>
+<img alt="_images/bp_04.png" src="_images/bp_04.png" />
+<hr class="docutils" />
+<p>There’s a helper function that lets you grab all the child actors (included the nested ones). This can be used to assign the material</p>
+<img alt="_images/bp_05.png" src="_images/bp_05.png" />
+<hr class="docutils" />
+<p>Assign this blueprint to all the relavant prefab assets.</p>
+<p>Double click the prefab asset to open the properties</p>
+<img alt="_images/prefab_asset.png" src="_images/prefab_asset.png" />
+<img alt="_images/bp_06.png" src="_images/bp_06.png" />
+<p>Spawning the prefab or randomizing it would now execute your script and pick up the new materials</p>
+<hr class="docutils" />
+<div class="section" id="sample-blueprint">
+<h2>Sample Blueprint<a class="headerlink" href="#sample-blueprint" title="Permalink to this headline">¶</a></h2>
+<p>Here are the screenshots of the blueprint used above</p>
+<div class="section" id="post-spawn">
+<h3>Post Spawn<a class="headerlink" href="#post-spawn" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/012.png" src="_images/012.png" />
+<p>Variables:
+* <strong>Materials</strong> : Material Interface (Array)
+* .. image:: /images/build_events/bp/01_vars.png</p>
+<p>Populate your materials in this MaterialInterface array</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="apply-random-material">
+<h3>Apply Random Material<a class="headerlink" href="#apply-random-material" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/022.png" src="_images/022.png" />
+<p>Variables:
+* <strong>Material</strong> : Material Interface
+* .. image:: /images/build_events/bp/02_vars.png</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-random-material">
+<h3>Get Random Material<a class="headerlink" href="#get-random-material" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/03.png" src="_images/03.png" />
+<hr class="docutils" />
+<p>You’ve reached the end of the User Guide. Let us know what you build in the forums.  [<a class="reference external" href="http://prefabricator.io](http://prefabricator.io">http://prefabricator.io](http://prefabricator.io</a>)</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="async_build.html" class="btn btn-neutral float-left" title="Asynchronous Building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Code Respawn
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Seed Linkers &mdash; Prefabricator [UE4]  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom_prefab.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Spawning Prefabs" href="spawning_prefabs.html" />
+    <link rel="prev" title="Level Randomization" href="level_randomization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Prefabricator [UE4]
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prefab_basics.html">Prefab Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_selection.html">Prefab Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefab_modification.html">Prefab Modifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pivot.html">Pivot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefabs.html">Nested Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefab_selection.html">Nested Prefab Selection</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Randomization</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prefab_collection.html">Prefab Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nested_prefab_randomization.html">Nested Prefab Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_randomization.html">Level Randomization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seed Linkers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Runtime Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spawning_prefabs.html">Spawning Prefabs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_prefab_randomization.html">Blueprint Prefab Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint_level_randomization.html">Blueprint Level Randomization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="async_build.html">Asynchronous Building</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_event_listener.html">Build Event Listener</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Prefabricator [UE4]</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Seed Linkers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seed-linkers">
+<h1>Seed Linkers<a class="headerlink" href="#seed-linkers" title="Permalink to this headline">¶</a></h1>
+<p>Use Seed Linkers to enforce same random selection across multiple prefab instance
+(e.g. have all the fence prefabs in the scene select the same random fence from the collection)</p>
+<hr class="docutils" />
+<p>Somtimes, you’d want certain prefab actors in the scene to share the same random selection.</p>
+<p>Consider the following example with a prefab collection with Pillar prefabs.</p>
+<img alt="_images/seed_linkers.gif" src="_images/seed_linkers.gif" />
+<hr class="docutils" />
+<p>Drop in a Seed Linker actor on the scene and rename it to something user-friendly (you will be referencing this later)</p>
+<img alt="_images/sl_drop_actor.png" src="_images/sl_drop_actor.png" />
+<img alt="_images/seed_linker_rename.png" src="_images/seed_linker_rename.png" />
+<hr class="docutils" />
+<p>Inspect the seed linker actor in the details panel</p>
+<img alt="_images/016.png" src="_images/016.png" />
+<p>This specifies the list of prefabs that should have their seeds linked (i.e. share the same random result)</p>
+<p>You can manually add the prefab actor references here. However there’s an easier way</p>
+<hr class="docutils" />
+<p>Select all the actors that should have their seeds linked. Hold down <em>Control</em> key and select the Pillar Prefab Actors</p>
+<img alt="_images/02.jpg" src="_images/02.jpg" />
+<p>On the editor’s main toolbar, click the Prefabricator Tool button &gt; Link Selected Prefab Collection Seeds &gt; [SeedLinkerName]</p>
+<img alt="_images/03.jpg" src="_images/03.jpg" />
+<hr class="docutils" />
+<p>Select the seed linker and you should be able to see red lines to the prefabs that the seed linker is referencing</p>
+<img alt="_images/041.jpg" src="_images/041.jpg" />
+<hr class="docutils" />
+<p>Randomizing the level will now enforce same random selection for these prefabs</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spawning_prefabs.html" class="btn btn-neutral float-right" title="Spawning Prefabs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="level_randomization.html" class="btn btn-neutral float-left" title="Level Randomization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Code Respawn
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
