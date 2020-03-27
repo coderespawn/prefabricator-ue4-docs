@@ -3,7 +3,8 @@ Prefab Selection
 
 Select an existing prefab actor on the scene by clicking on it and move it around as a single unit.  A selected prefab would have a green outline to it
 
-{% include note.html content="The green outlines will not show up if the editor is in *Game Mode*.  Press the **G key** in the editor viewport to toggle it" %}
+.. note::
+   The green outlines will not show up if the editor is in *Game Mode*.  Press the **G key** in the editor viewport to toggle it
 
 .. figure:: /images/selection/B_selection.jpg
 

@@ -63,7 +63,8 @@ We want to decroate the facade of the buildings and prepared 5 different prefabs
 An empty prefab was included in the list so we don't have any decorations sometimes
 
 
-{% include note.html content="Make sure all the prefabs in your collections have consistent pivots so all the items in the collection spawn consistently in the right place" %}
+.. note::
+   Make sure all the prefabs in your collections have consistent pivots so all the items in the collection spawn consistently in the right place
 
 ----
 

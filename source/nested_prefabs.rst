@@ -13,7 +13,8 @@ We'll use the barrel prefab from our previous example. Drop in 3 barrel prefabs 
 
 Hold down the **Control** key and select the three prefabs. We will be using this selection to create a new prefab
 
-{% include note.html content="Make sure you see a green outline around the selection. Green outline means prefab selection" %}
+.. note::
+   Make sure you see a green outline around the selection. Green outline means prefab selection
 
 .. image:: /images/nested_prefabs/nested_prefab_02.jpg
 
