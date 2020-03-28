@@ -38,7 +38,7 @@ Prefabricator Documentation [UE4]
    :caption: Advanced
    
    build_event_listener
-
+   manual_installation
 
 .. toctree::
    :maxdepth: 2

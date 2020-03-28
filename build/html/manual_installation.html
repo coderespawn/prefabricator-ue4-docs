@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Saving / Loading &mdash; Prefabricator [UE4]  documentation</title>
+  <title>Manual Plugin Installation &mdash; Prefabricator [UE4]  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="_static/css/custom_prefab.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Platformer Game" href="game_sample_platformer.html" />
-    <link rel="prev" title="Build Menu Data" href="construction_system_build_menu.html" /> 
+    <link rel="next" title="Overview" href="construction_system_overview.html" />
+    <link rel="prev" title="Build Event Listener" href="build_event_listener.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,18 +107,18 @@
 <li class="toctree-l1"><a class="reference internal" href="async_build.html">Asynchronous Building</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="build_event_listener.html">Build Event Listener</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manual_installation.html">Manual Plugin Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manual Plugin Installation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Construction System</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_project_setup.html">Project Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_prefab_setup.html">Prefab Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_player_setup.html">Player Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_build_menu.html">Build Menu Data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Saving / Loading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction_system_save_load.html">Saving / Loading</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Samples</span></p>
 <ul>
@@ -169,7 +169,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Saving / Loading</li>
+      <li>Manual Plugin Installation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,8 +186,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="saving-loading">
-<h1>Saving / Loading<a class="headerlink" href="#saving-loading" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="manual-plugin-installation">
+<h1>Manual Plugin Installation<a class="headerlink" href="#manual-plugin-installation" title="Permalink to this headline">¶</a></h1>
+<p>If for some reason you don’t want to use the Marketplace version, you can grab the latest release from the github <a class="reference external" href="https://github.com/coderespawn/prefabricator-ue4/releases">Releases</a> page and install it manually in your game project</p>
+<p>First, uninstall the marketplace version from the Launcher, then follow these steps</p>
+<ul class="simple">
+<li><p>Navigate to your game project directory</p></li>
+<li><p>Create a directory named Plugins</p></li>
+<li><p>Extract the downloaded release archive and navigate to the appropriate engine version (e.g. 4.24)</p></li>
+<li><p>Copy the Prefabricator folder over to the Game projects Plugins folder so that we have <code class="docutils literal notranslate"><span class="pre">GAME_PROJECT/Plugins/Prefabricator</span></code></p></li>
+</ul>
+<img alt="_images/014.png" src="_images/014.png" />
 </div>
 
 
@@ -198,10 +207,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="game_sample_platformer.html" class="btn btn-neutral float-right" title="Platformer Game" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="construction_system_overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="construction_system_build_menu.html" class="btn btn-neutral float-left" title="Build Menu Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="build_event_listener.html" class="btn btn-neutral float-left" title="Build Event Listener" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
