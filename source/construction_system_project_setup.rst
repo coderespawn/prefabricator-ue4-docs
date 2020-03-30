@@ -1,3 +1,5 @@
+.. _construction-project-settings:
+
 Project Settings
 ================
 
@@ -80,5 +82,8 @@ CSCursorRotate        Middle Wheel Axis   Rotate the cursor prefab while placeme
 .. image:: /images/construction/C03.png
 
 
+Explore the Construction System game sample:
 
+.. image:: /images/construction/Z01.png
 
+.. image:: /images/construction/Z02.jpg
