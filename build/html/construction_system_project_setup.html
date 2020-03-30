@@ -114,7 +114,15 @@
 <p class="caption"><span class="caption-text">Construction System</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="construction_system_overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#collision">Collision</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-trace-channel">Create Trace Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-collision-profile">Create Collision Profile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#input">Input</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_prefab_setup.html">Prefab Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_player_setup.html">Player Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="construction_system_build_menu.html">Build Menu Data</a></li>
@@ -188,6 +196,105 @@
             
   <div class="section" id="project-settings">
 <h1>Project Settings<a class="headerlink" href="#project-settings" title="Permalink to this headline">¶</a></h1>
+<p>The Construction System requires a few Project Settings to be setup first</p>
+<div class="section" id="collision">
+<h2>Collision<a class="headerlink" href="#collision" title="Permalink to this headline">¶</a></h2>
+<p>You’ll need to setup collision for the runtime build gameplay mode to work</p>
+<p>Open the Project Settings by navigating to <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">&gt;</span> <span class="pre">Project</span> <span class="pre">Settings</span></code></p>
+<img alt="_images/B01A.png" src="_images/B01A.png" />
+<p>Select <code class="docutils literal notranslate"><span class="pre">Collision</span></code> category</p>
+<img alt="_images/B01B.png" src="_images/B01B.png" />
+<div class="section" id="create-trace-channel">
+<h3>Create Trace Channel<a class="headerlink" href="#create-trace-channel" title="Permalink to this headline">¶</a></h3>
+<p>Create a New Trace Channel</p>
+<img alt="_images/B02.png" src="_images/B02.png" />
+<p>Set the name to <code class="docutils literal notranslate"><span class="pre">PrefabSnapChannel</span></code> and set the Default Response to <code class="docutils literal notranslate"><span class="pre">Ignore</span></code></p>
+<img alt="_images/B03A.png" src="_images/B03A.png" />
+<img alt="_images/B03B.png" src="_images/B03B.png" />
+</div>
+<div class="section" id="create-collision-profile">
+<h3>Create Collision Profile<a class="headerlink" href="#create-collision-profile" title="Permalink to this headline">¶</a></h3>
+<p>In that same page, create a new Collision Profile by clicking the <code class="docutils literal notranslate"><span class="pre">New</span></code> button under the <cite>Preset</cite> category</p>
+<img alt="_images/B04A.png" src="_images/B04A.png" />
+<img alt="_images/B04B.png" src="_images/B04B.png" />
+<img alt="_images/B04C.png" src="_images/B04C.png" />
+</div>
+</div>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>Set the following input so the construction gameplay system can work.  In the Project Settings page, select the Input category</p>
+<img alt="_images/C01.png" src="_images/C01.png" />
+<p>Add the following Action Mappings</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 20%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CSModeToggle</p></td>
+<td><p>E</p></td>
+<td><p>Toggle Build node On/Off</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSToggleBuildUI</p></td>
+<td><p>Q</p></td>
+<td><p>Toggles Build UI to select a prefab</p></td>
+</tr>
+<tr class="row-even"><td><p>CSModeToolBuild</p></td>
+<td><p>1</p></td>
+<td><p>Build Tool</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSModeToolRemove</p></td>
+<td><p>2</p></td>
+<td><p>Remove Tool</p></td>
+</tr>
+<tr class="row-even"><td><p>CSBuiltAtCursor</p></td>
+<td><p>Left Mouse Button</p></td>
+<td><p>Build prefab at cursor (Build Tool)</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSRemoveAtCursor</p></td>
+<td><p>Left Mouse Button</p></td>
+<td><p>Remove prefab at cursor (Remove Tool)</p></td>
+</tr>
+<tr class="row-even"><td><p>CSCursorItemNext</p></td>
+<td><p>X</p></td>
+<td><p>Next Prefab item from the cursor’s prefab collection</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSCursorItemPrev</p></td>
+<td><p>Z</p></td>
+<td><p>Previous Prefab item from the cursor’s prefab collection</p></td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/C02.png" src="_images/C02.png" />
+<p>Add the following Action Mappings</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 22%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CSCursorRotate</p></td>
+<td><p>Middle Wheel Axis</p></td>
+<td><p>Rotate the cursor prefab while placement</p></td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/C03.png" src="_images/C03.png" />
+</div>
 </div>
 
 
