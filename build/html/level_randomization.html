@@ -98,6 +98,8 @@
 <li class="toctree-l1"><a class="reference internal" href="nested_prefab_randomization.html">Nested Prefab Randomization</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Level Randomization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prefab-randomizer-actor">Prefab Randomizer Actor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#randomize-on-begin-play">Randomize on Begin Play</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#randomize-selected-prefabs">Randomize Selected Prefabs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="seed_linkers.html">Seed Linkers</a></li>
@@ -191,7 +193,7 @@
             
   <div class="section" id="level-randomization">
 <h1>Level Randomization<a class="headerlink" href="#level-randomization" title="Permalink to this headline">¶</a></h1>
-<p>Randomize all the prefabs in a level</p>
+<p>Randomize all the prefabs in a level asynchronously over multiple frames</p>
 <div class="section" id="prefab-randomizer-actor">
 <h2>Prefab Randomizer Actor<a class="headerlink" href="#prefab-randomizer-actor" title="Permalink to this headline">¶</a></h2>
 <p>This utility actor helps with randomizing all the prefabs in the level</p>
@@ -203,6 +205,18 @@
 <hr class="docutils" />
 <img alt="_images/level_rand.gif" src="_images/level_rand.gif" />
 <p>You can also randomize this at runtime using [Blueprints][blueprint_level_randomization]</p>
+</div>
+<div class="section" id="randomize-on-begin-play">
+<h2>Randomize on Begin Play<a class="headerlink" href="#randomize-on-begin-play" title="Permalink to this headline">¶</a></h2>
+<p>Select this option if you want your level to be randomized when the game starts</p>
+<img alt="_images/rand_prop.png" src="_images/rand_prop.png" />
+</div>
+<div class="section" id="randomize-selected-prefabs">
+<h2>Randomize Selected Prefabs<a class="headerlink" href="#randomize-selected-prefabs" title="Permalink to this headline">¶</a></h2>
+<p>If you want to randomize only a certain set of prefabs actors (instead of the entire level), then assign those actors in the <code class="docutils literal notranslate"><span class="pre">Actors</span> <span class="pre">To</span> <span class="pre">Randomize</span></code> list.  If this list is left empty, every prefab actor in the level would be randomized</p>
+<p>This can be useful if you want to the randomize heavy prefabs at runtime asychronously</p>
+<p>Here’s a example of a helper function to randomize a prefab at runtime.  This function creates a prefab randomizer actor, sets the target prefab,  randomizes it asynchronously and when the randomization completes, it destroys the randomizer actor</p>
+<img alt="_images/033.png" src="_images/033.png" />
 </div>
 </div>
 

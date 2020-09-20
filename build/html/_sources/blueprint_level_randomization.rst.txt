@@ -5,7 +5,7 @@ Randomize a level at runtime by invoking it from blueprints
 
 ----
 
-Place a [Prefab Randomizer][level_randomization] actor on the scene if not placed already
+Place a ``Prefab Randomizer`` actor on the scene if not placed already
 
 Get a reference of this actor into your blueprint.  In this example, a level blueprint is used.
 
